@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const config = require('config');
 const authRouter = require('./routes/auth.routes');
 const createTeRouter = require('./routes/createTe.routes');
-
+const corsMiddleware = require('./middleware/cross.middleware');
 const app = express();
 const PORT = config.get('serverPort');
 
+app.use(corsMiddleware);
 app.use(express.json());
 app.use('/api/auth', authRouter);
-app.use('/api/auth', createTeRouter);
 
 const start = async () => {
   try {

@@ -45,22 +45,23 @@ router.post('/login',
         try {
             const {login, password} = req.body;
             const user = await User.findOne({login});
-            if (!user){
-                return res.status(404).json({message: `Пользователя с таким ${login} не существует`});
+            if (!user) {
+                return res.status(400).json({message: `Пользователя с таким ${login} не существует`});
             }
             const passValid = bcrypt.compareSync(password, user.password);
-            if (!passValid){
+            if (!passValid) {
                 return res.status(400).json({message: "Неверный пароль"});
             }
             const token = jwt.sign({id: user.id}, config.get('secretKey'), {expiresIn: "24h"});
             return res.json({
-              token,
-              user: {
-                  id: user.id,
-                  login: user.login,
-                  email: user.email,
-                  name: user.name
-              }
+                message: "login",
+                token,
+                user: {
+                    id: user.id,
+                    login: user.login,
+                    email: user.email,
+                    name: user.name,
+                }
             })
 
         } catch (e) {

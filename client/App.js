@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 import Auth from "./src/components/authUser/auth";
 
-export default class App extends Component {
-  // state = {
-  //
-  // }
+function App() {
 
-  render() {
+    // state = {
+    //
+    // }
     return (
-        <Auth />
+        <Auth/>
     )
-  }
 }
+
+export default App;
+
