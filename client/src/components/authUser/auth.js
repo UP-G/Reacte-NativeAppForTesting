@@ -7,12 +7,14 @@ import {
     Text,
     StatusBar,
     TextInput,
-    Button,
+    Button, AppRegistry,
 } from 'react-native';
-import {Formik} from 'formik';
 import {authentication} from "../../actions/user";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
-const Auth = () => {
+const Stack = createNativeStackNavigator();
+
+export function Auth( {navigation} ) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
 
@@ -39,6 +41,11 @@ const Auth = () => {
                             secureTextEntry
                         />
                         <Button onPress={() => authentication(login, password)} title={"Press"}/>
+                        <Button
+                            title="Go to Details"
+
+                            onPress={() => navigation.navigate('Details')}
+                        />
                     </>
                 </View>
             </SafeAreaView>
@@ -59,3 +66,4 @@ const styles = StyleSheet.create({
 });
 
 export default Auth;
+
