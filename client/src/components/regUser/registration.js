@@ -14,23 +14,48 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-export function Auth( {navigation} ) {
+export function RegComp() {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+
 
     return (
         <>
             <StatusBar barStyle="dark-content"/>
             <SafeAreaView style={styles.container}>
                 <View style={styles.loginContainer}>
-                    <Text>Login Screen</Text>
+                    <Text>Reg Screen</Text>
                     <>
+                        <TextInput
+                            name="name"
+                            placeholder="Name"
+                            style={styles.textInput}
+                            value={name}
+                            onChangeText={setName}
+                        />
+                        <TextInput
+                            name="lastName"
+                            placeholder="Last Name"
+                            style={styles.textInput}
+                            value={lastName}
+                            onChangeText={setLastName}
+                        />
                         <TextInput
                             name="login"
                             placeholder="login Address"
                             style={styles.textInput}
                             value={login}
                             onChangeText={setLogin}
+                        />
+                        <TextInput
+                            name="email"
+                            placeholder="E-mail"
+                            style={styles.textInput}
+                            value={email}
+                            onChangeText={setEmail}
                         />
                         <TextInput
                             name="password"
@@ -40,11 +65,8 @@ export function Auth( {navigation} ) {
                             onChangeText={setPassword}
                             secureTextEntry
                         />
+
                         <Button onPress={() => authentication(login, password)} title={"Press"}/>
-                        <Button
-                            title="Go to Reg"
-                            onPress={() => navigation.navigate('Reg')}
-                        />
                     </>
                 </View>
             </SafeAreaView>
@@ -57,12 +79,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    loginContainer: {
-        width: '80%',
-        alignItems: 'center',
-    },
+    }
 });
 
-export default Auth;
+export default RegComp;
 

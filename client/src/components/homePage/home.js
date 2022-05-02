@@ -1,6 +1,6 @@
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import {RegComp} from "../Router/routerRegistration";
+import {RegComp} from "../regUser/registration";
 import {Auth} from "../authUser/auth";
 import React from "react";
 
@@ -10,8 +10,8 @@ function Home() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={Auth} />
-                <Stack.Screen name="Details" component={RegComp} />
+                <Stack.Screen name="Auth" component={Auth} />
+                <Stack.Screen name="Reg" component={RegComp} />
             </Stack.Navigator>
         </NavigationContainer>
     );
