@@ -9,7 +9,7 @@ import {
     TextInput,
     Button, AppRegistry,
 } from 'react-native';
-import {authentication} from "../../actions/user";
+import {registration} from "../../actions/user";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
@@ -20,7 +20,6 @@ export function RegComp() {
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-
 
     return (
         <>
@@ -65,8 +64,7 @@ export function RegComp() {
                             onChangeText={setPassword}
                             secureTextEntry
                         />
-
-                        <Button onPress={() => authentication(login, password)} title={"Press"}/>
+                        <Button onPress={() => registration(name, login, email, password)} title={"Reg"}/>
                     </>
                 </View>
             </SafeAreaView>

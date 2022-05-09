@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d5d322-8617-49ce-9b1b-3640522914ed" name="Changes" comment="git push">
-      <change afterPath="$PROJECT_DIR$/client/src/components/regUser/registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Router/routerRegistration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authUser/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authUser/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/homePage/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/homePage/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/regUser/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/regUser/registration.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,8 @@
       <workItem from="1651065445432" duration="1774000" />
       <workItem from="1651112046144" duration="7708000" />
       <workItem from="1651212765543" duration="5361000" />
-      <workItem from="1651447206129" duration="4763000" />
+      <workItem from="1651447206129" duration="6572000" />
+      <workItem from="1652108371154" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="git push">
       <created>1650672647477</created>
